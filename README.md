@@ -13,7 +13,7 @@ cp .env.example .env
 ```
 after that you need to edit the .env file by adding your credentials.
 
-```bash
+
 ## Usage
 
 ```bash
