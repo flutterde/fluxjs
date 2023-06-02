@@ -13,6 +13,13 @@ cp .env.example .env
 ```
 after that you need to edit the .env file by adding your credentials.
 
+## Database
+Now it's time to link your database with your project, Add your database link to DATABASE_URL in .env file, then run:
+
+```bash
+npx prisma db push
+```
+
 
 ## Usage
 
