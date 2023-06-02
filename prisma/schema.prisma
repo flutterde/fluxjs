@@ -6,8 +6,46 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mysql"
   url      = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+// Define the `User` table in the database
+
+model User {
+
+  id       String  @id @default(cuid())
+
+  email    String  @unique
+
+  password String 
+
+  name     String? 
+
+  posts    Post[]
+
+  @@map("users")
+
+}
+
+
+// Define the `Post` table in the database
+
+model Post {
+
+  id       String  @id @default(cuid())
+
+  title    String
+
+  content  String?
+
+  authorId String
+
+  author   User    @relation(fields: [authorId], references: [id])
+
+  @@map("posts")
+
 }
 
 
