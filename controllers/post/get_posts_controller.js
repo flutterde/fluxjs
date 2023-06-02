@@ -1,4 +1,4 @@
-
+import { PrismaClient } from '@prisma/client' 
 
 exports.getPostsController = async (req, res) => {
     try {
