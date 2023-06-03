@@ -1,4 +1,3 @@
-//import prisma from "../../lib/prisma";
 const prisma = require("../../lib/prisma");
 
 exports.getUsersController = async (req, res) => {
