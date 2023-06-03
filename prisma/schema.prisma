@@ -49,4 +49,9 @@ model Post {
 }
 
 
+model Comment {
+  id  Int @default(autoincrement()) @id
+}
+
+
 
